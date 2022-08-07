@@ -1,2 +1,2 @@
-# Embedded_System_Online_Diploma
+# Master_Embedded_Systems_Diploma
   
