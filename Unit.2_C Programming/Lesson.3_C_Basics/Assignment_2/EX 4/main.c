@@ -15,21 +15,21 @@ int main(void)
 	float x;
 	printf("Enter the number: ");
 	fflush(stdout); fflush(stdin);
+	scanf("%f",&x);
 
-	scanf("%f ",&x);
 	if(x>0)
 	{
 
-		printf("%.2f is Positive ",x);
+		printf("\n%.2f is Positive ",x);
 
 	}
 	else if(x<0)
 	{
-		printf("%.2f is Negative ",x);
+		printf("\n%.2f is Negative ",x);
 	}
 	else
 	{
-		printf("%.2f is Zero ",x);
+		printf("\n%.2f is Zero ",x);
 	}
 
 
