@@ -1,0 +1,12 @@
+Output:
+size of union=32
+size of structure=40
+
+
+Explaination:
+>>>>Storing  size of union 
+    is equal to the biggest size of datatype of it's members.
+    (char name[32])>> the biggest size consist of 32 Bytes. 
+>>>>Storing  size of structure 
+     is equal to the sumintion of size of the datatypes of all members.
+     (char name[32])+(float salary)+ (int worker_no) = 32+4+4 = 40 Bytes.
