@@ -17,5 +17,6 @@ int main()
 	{
 		printf("element - %d : %d\n",i+1,*(ptr+i));
 	}
+	getchar();
 	return 0;
 }

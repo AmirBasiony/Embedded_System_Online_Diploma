@@ -18,5 +18,6 @@ int main()
 	printf("The pointer variable ab is assigned with the value 7 now.\n");
 	printf("Address of m : 0x%p\n",&m);
 	printf("Value of m : %d\n",m);
+	getchar();
     return 0;	
 }

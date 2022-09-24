@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 struct emplyee
 {
 	char* m_name;
@@ -19,6 +18,7 @@ int main()
     	printf("Employee ID : %d\n",(*(*pt+i))->m_id);
 		printf("=======================================\n");
 	}
+	getchar();
 	//Equivalent to >> printf("Employee ID : %d",(**(*pt+1)).m_id);
 	/*
 	 Explaination:

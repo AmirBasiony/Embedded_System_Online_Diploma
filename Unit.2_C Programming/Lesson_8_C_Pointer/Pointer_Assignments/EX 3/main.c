@@ -12,6 +12,6 @@ int main()
 	printf("Reverse of the string is : ");
 	for(i=strlen(str)-1;i>=0;i--)
 		printf("%c",*(ptr+i));
-	
+	getchar();
 	return 0;
 }

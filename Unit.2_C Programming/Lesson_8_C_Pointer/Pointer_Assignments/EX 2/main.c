@@ -10,5 +10,6 @@ int main()
 	{
 		printf("%c   ",*(ptr+i));
 	}
+	getchar();
 	return 0;
 }
