@@ -5,7 +5,6 @@
  * Author		   : Amir ELbasiony
 ******************************************************************************
  */
-#include <stdio.h>
 #include <stdint.h>
 #define RCC_BASE 	0x40021000
 #define GPIO_BASE 	0x40010800
