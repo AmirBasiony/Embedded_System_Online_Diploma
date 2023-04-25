@@ -2,7 +2,7 @@
   
 ## Contents
 
-### First Term ![image](https://progress-bar.dev/100/?title=IN_PROGRESS)
+### First Term ![image](https://progress-bar.dev/100/?title=FINISHED)
 
 - [Unit 1: Diploma Prerequisites](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/100/?title=No_Assignments&color=bababa)
 - [Unit 2: C Programming](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit.2_C%20Programming) ![image](https://progress-bar.dev/100/)
@@ -12,7 +12,7 @@
 
 ---
 
-### Second Term ![image](https://progress-bar.dev/0/?title=Start_Soon&color=ff00ff)
+### Second Term ![image](https://progress-bar.dev/0/?title=IN_PROGRESS&color=ff00ff)
 
 - [Unit 6: MCU Fundamentals](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/20/)
 - [Unit 7: MCU Essential Peripherals](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/0/)
