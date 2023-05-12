@@ -33,7 +33,7 @@
 
 ___
 
-## Overall progress ![image](https://github.com/AmirBasiony/Mastering_Embedded_Systems/blob/main/Midterm%20Certificate.png)
+## Overall progress ![image](https://github.com/AmirBasiony/Mastering_Embedded_Systems/blob/main/First%20Term%20Certificate.png)
 ___
 
 ## My Progress Profile: [Click Here](https://www.learn-in-depth.com/online-diploma/amirbasiony14%40gmail.com)
