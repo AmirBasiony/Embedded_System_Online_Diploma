@@ -1,0 +1,36 @@
+/*
+ * STM32F103C6_GPIO.h
+ *
+ *  Created on: Jul 16, 2023
+ *      Author: Amir
+ */
+
+#ifndef INC_STM32F103C6_GPIO_H_
+#define INC_STM32F103C6_GPIO_H_
+
+//-----------------------------
+//Includes
+//-----------------------------
+#include "STM32F103x6.h"
+
+//-----------------------------
+//User type definitions (structures)
+//-----------------------------
+
+//GPIO
+#define GPIOA			((GPIO_TypeDef *)GPIOA_BASE)
+
+
+//-----------------------------
+//Macros Configuration References
+//-----------------------------
+/*@ref Module_REF_NAME_define
+*/
+/*
+* ===============================================
+* APIs Supported by "MCAL GPIO DRIVER"
+* ===============================================
+*/
+
+
+#endif /* INC_STM32F103C6_GPIO_H_ */

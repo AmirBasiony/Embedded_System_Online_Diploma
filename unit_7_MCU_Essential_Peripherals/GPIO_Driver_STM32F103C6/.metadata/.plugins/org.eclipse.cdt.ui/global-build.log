@@ -1,0 +1,1056 @@
+04:33:31 **** Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 -mcpu=cortex-m3 -g3 -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c6tx.d" -MT"Startup/startup_stm32f103c6tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c6tx.o" "../Startup/startup_stm32f103c6tx.s"
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc -gdwarf-2 "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-size   Drivers.elf 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+Finished building: default.size.stdout
+ 
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+23:03:22 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+ 
+23:44:07 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+ 
+23:44:49 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+00:02:00 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+00:05:57 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+ 
+00:12:27 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from ../Src/main.c:25:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:23:20: error: duplicate member 'PinNumber'
+  volatile uint32_t PinNumber;
+                    ^~~~~~~~~
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+00:12:55 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: default.size.stdout
+Finished building: Drivers.list
+Finished building: Drivers.bin
+ 
+ 
+ 
+02:11:44 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:49:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:115:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+02:58:17 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'GET_CRLH_Position':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:11:9: error: switch quantity not an integer
+  switch(PinNumber)
+         ^~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_Init':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:86:52: warning: passing argument 1 of 'GET_CRLH_Position' makes pointer from integer without a cast [-Wint-conversion]
+  (*Config_Register) &= ~(0xF << (GET_CRLH_Position(PinConfig->GPIO_PinNumber)) );
+                                                    ^~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:9:9: note: expected 'GPIO_PINConfig_t * {aka struct <anonymous> *}' but argument is of type 'uint16_t {aka volatile short unsigned int}'
+ uint8_t GET_CRLH_Position(GPIO_PINConfig_t *PinNumber)
+         ^~~~~~~~~~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:126:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:138:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:192:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+03:04:13 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'GET_CRLH_Position':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:11:9: error: switch quantity not an integer
+  switch(PinNumber)
+         ^~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_Init':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:86:52: error: incompatible type for argument 1 of 'GET_CRLH_Position'
+  (*Config_Register) &= ~(0xF << (GET_CRLH_Position(PinConfig->GPIO_PinNumber)) );
+                                                    ^~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:9:9: note: expected 'GPIO_PINConfig_t {aka struct <anonymous>}' but argument is of type 'uint16_t {aka volatile short unsigned int}'
+ uint8_t GET_CRLH_Position(GPIO_PINConfig_t PinNumber)
+         ^~~~~~~~~~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:100:59: error: incompatible type for argument 1 of 'GET_CRLH_Position'
+   (*Config_Register) |= (Pin_Config << (GET_CRLH_Position(PinConfig->GPIO_PinNumber)) );
+                                                           ^~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:9:9: note: expected 'GPIO_PINConfig_t {aka struct <anonymous>}' but argument is of type 'uint16_t {aka volatile short unsigned int}'
+ uint8_t GET_CRLH_Position(GPIO_PINConfig_t PinNumber)
+         ^~~~~~~~~~~~~~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:127:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:139:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+03:04:52 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:127:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:139:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:193:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+03:52:20 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:149:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:161:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:215:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+04:27:19 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_ReadPort':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:214:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:268:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+ 
+05:01:09 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_LockPin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:300:25: error: expected '=', ',', ';', 'asm' or '__attribute__' before '->' token
+  volatile uint32_t GPIOx->LCKR = (1<<16); // 0b0001 0000 0000 0000 0000 (Set Pin 16)
+                         ^~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:300:25: error: expected expression before '->' token
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:302:2: error: 'tmp' undeclared (first use in this function)
+  tmp |= PinNumber;   // 0b0001 0000 0000 0001 0000 (Set Pin(PinNumber) to be Locked)
+  ^~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:302:2: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+05:01:32 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+05:23:32 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+../Src/main.c: In function 'GPIO_Init':
+../Src/main.c:41:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PA1->GPIO_PinNumber = GPIO_PIN_1;
+            ^~
+../Src/main.c:42:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PA1->GPIO_PinMode   = GPIO_MODE_Input_FLO;
+            ^~
+../Src/main.c:43:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA1);
+                 ^
+../Src/main.c:47:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinNumber = GPIO_PIN_1;
+            ^~
+../Src/main.c:48:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinMode   = GPIO_MODE_Output_PP;
+            ^~
+../Src/main.c:49:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinMode   = GPIO_MAX_Speed_10;
+            ^~
+../Src/main.c:50:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOB, &Config_PB1);
+                 ^
+../Src/main.c:56:13: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PA13->GPIO_PinNumber = GPIO_PIN_13;
+             ^~
+../Src/main.c:57:13: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PA13->GPIO_PinMode   = GPIO_MODE_Input_FLO;
+             ^~
+../Src/main.c:58:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA13);
+                 ^
+../Src/main.c:62:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinNumber = GPIO_PIN_13;
+            ^~
+../Src/main.c:63:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinMode   = GPIO_MODE_Output_PP;
+            ^~
+../Src/main.c:64:12: error: invalid type argument of '->' (have 'GPIO_PINConfig_t {aka struct <anonymous>}')
+  Config_PB1->GPIO_PinMode   = GPIO_MAX_Speed_10;
+            ^~
+../Src/main.c:65:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOB, &Config_PB13);
+                 ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+05:24:40 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+../Src/main.c: In function 'GPIO_Init':
+../Src/main.c:43:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA1);
+                 ^
+../Src/main.c:48:2: error: 'Config_PB' undeclared (first use in this function); did you mean 'Config_PB1'?
+  Config_PB.GPIO_PinMode   = GPIO_MODE_Output_PP;
+  ^~~~~~~~~
+  Config_PB1
+../Src/main.c:48:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:50:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOB, &Config_PB1);
+                 ^
+../Src/main.c:58:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA13);
+                 ^
+../Src/main.c:65:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOB, &Config_PB13);
+                 ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+05:25:00 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+../Src/main.c: In function 'GPIO_Init':
+../Src/main.c:43:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA1);
+                 ^
+../Src/main.c:48:2: error: 'Config_PB' undeclared (first use in this function); did you mean 'Config_PB1'?
+  Config_PB.GPIO_PinMode   = GPIO_MODE_Output_PP;
+  ^~~~~~~~~
+  Config_PB1
+../Src/main.c:48:2: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:50:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOB, &Config_PB1);
+                 ^
+../Src/main.c:58:17: error: lvalue required as unary '&' operand
+  MCAL_GPIO_Init(&GPIOA, &Config_PA13);
+                 ^
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+05:25:09 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+../Src/main.c: In function 'GPIO_Init':
+../Src/main.c:48:2: error: 'Config_PB' undeclared (first use in this function); did you mean 'Config_PB1'?
+  Config_PB.GPIO_PinMode   = GPIO_MODE_Output_PP;
+  ^~~~~~~~~
+  Config_PB1
+../Src/main.c:48:2: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+05:25:21 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      8	   1568	   3004	    bbc	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+05:25:45 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      8	   1568	   3004	    bbc	Drivers.elf
+Finished building: default.size.stdout
+ 
+05:47:42 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+06:06:21 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE0000000UL
+               ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+ 
+06:22:58 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_DeInit':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: error: 'GPIOF' undeclared (first use in this function); did you mean 'GPIOx'?
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+                   GPIOx
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+06:24:01 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_DeInit':
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: error: 'GPIOF_BASE' undeclared (first use in this function); did you mean 'GPIOA_BASE'?
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+06:24:35 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:24:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:28:15: warning: ISO C99 requires whitespace after the macro name
+ #define Cortex+_M3_Internal_Peripherals_BASE  0XE00000000UL
+               ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_DeInit':
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: error: 'GPIOF_BASE' undeclared (first use in this function); did you mean 'GPIOA_BASE'?
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+06:25:01 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:14:0,
+                 from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_DeInit':
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: error: 'GPIOF_BASE' undeclared (first use in this function); did you mean 'GPIOA_BASE'?
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103x6.h:150:34: note: each undeclared identifier is reported only once for each function it appears in
+ #define GPIOF   ((GPIO_TypeDef *)GPIOF_BASE)
+                                  ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:170:19: note: in expansion of macro 'GPIOF'
+  else if(GPIOx == GPIOF)
+                   ^~~~~
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+06:25:21 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+06:25:43 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c:25:30: warning: extra tokens at end of #include directive
+ #include "STM32F103C6_GPIO.h".h"
+                              ^
+../Src/main.c:25:32: warning: missing terminating " character
+ #include "STM32F103C6_GPIO.h".h"
+                                ^
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+06:25:50 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+ 
+06:52:33 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+07:11:51 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:25:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:114:24: error: unknown type name 'S_GPIO_t'; did you mean 'GPIOC'?
+ void MCAL_GPIO_SET_Pin(S_GPIO_t *GPIOport, uint16_t Pin_number, uint8_t mode, uint8_t speed);
+                        ^~~~~~~~
+                        GPIOC
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:114:24: error: unknown type name 'S_GPIO_t'; did you mean 'GPIOC'?
+ void MCAL_GPIO_SET_Pin(S_GPIO_t *GPIOport, uint16_t Pin_number, uint8_t mode, uint8_t speed);
+                        ^~~~~~~~
+                        GPIOC
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c: In function 'MCAL_GPIO_SET_Pin':
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:314:5: error: unknown type name 'GPIO_Pin_Config_t'; did you mean 'GPIO_PINConfig_t'?
+     GPIO_Pin_Config_t GPIOx;
+     ^~~~~~~~~~~~~~~~~
+     GPIO_PINConfig_t
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:314:23: error: 'GPIOx' redeclared as different kind of symbol
+     GPIO_Pin_Config_t GPIOx;
+                       ^~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:312:42: note: previous definition of 'GPIOx' was here
+ void MCAL_GPIO_SET_Pin(GPIO_PINConfig_t *GPIOx, uint16_t Pin_number, uint8_t mode, uint8_t speed)
+                                          ^~~~~
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:315:10: error: request for member 'GPIO_Pin_Number' in something not a structure or union
+     GPIOx.GPIO_Pin_Number = Pin_number;
+          ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:316:10: error: request for member 'GPIO_Mode' in something not a structure or union
+     GPIOx.GPIO_Mode = mode;
+          ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:317:10: error: request for member 'GPI' in something not a structure or union
+     GPIOx.GPI = speed;
+          ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:318:20: error: 'GPIOport' undeclared (first use in this function); did you mean 'GPIOx'?
+     MCAL_GPIO_Init(GPIOport, &GPIOx);
+                    ^~~~~~~~
+                    GPIOx
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:318:20: note: each undeclared identifier is reported only once for each function it appears in
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:318:30: warning: passing argument 2 of 'MCAL_GPIO_Init' from incompatible pointer type [-Wincompatible-pointer-types]
+     MCAL_GPIO_Init(GPIOport, &GPIOx);
+                              ^
+../STM32F103C6_Drivers/STM32F103C6_GPIO.c:78:6: note: expected 'GPIO_PINConfig_t * {aka struct <anonymous> *}' but argument is of type 'int *'
+ void MCAL_GPIO_Init(GPIO_TypeDef *GPIOx , GPIO_PINConfig_t *PinConfig)
+      ^~~~~~~~~~~~~~
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+07:13:50 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+In file included from ../Src/main.c:25:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:114:24: error: unknown type name 'S_GPIO_t'; did you mean 'GPIOC'?
+ void MCAL_GPIO_SET_Pin(S_GPIO_t *GPIOport, uint16_t Pin_number, uint8_t mode, uint8_t speed);
+                        ^~~~~~~~
+                        GPIOC
+make: *** [Src/subdir.mk:24: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+In file included from ../STM32F103C6_Drivers/STM32F103C6_GPIO.c:7:0:
+D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc/STM32F103C6_GPIO.h:114:24: error: unknown type name 'S_GPIO_t'; did you mean 'GPIOC'?
+ void MCAL_GPIO_SET_Pin(S_GPIO_t *GPIOport, uint16_t Pin_number, uint8_t mode, uint8_t speed);
+                        ^~~~~~~~
+                        GPIOC
+make: *** [STM32F103C6_Drivers/subdir.mk:18: STM32F103C6_Drivers/STM32F103C6_GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+07:14:06 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 "../STM32F103C6_Drivers/STM32F103C6_GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"STM32F103C6_Drivers/STM32F103C6_GPIO.d" -MT"STM32F103C6_Drivers/STM32F103C6_GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "STM32F103C6_Drivers/STM32F103C6_GPIO.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+07:14:41 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: default.size.stdout
+ 
+07:17:29 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      8	   1568	   3004	    bbc	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+07:19:53 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: default.size.stdout
+Finished building: Drivers.bin
+ 
+ 
+ 
+07:22:17 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1408	      8	   1568	   2984	    ba8	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 
+07:22:47 **** Incremental Build of configuration Debug for project Drivers ****
+make -j8 all 
+arm-none-eabi-gcc -gdwarf-2 "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -DDEBUG -c -I../Inc -I"D:/Embedded System Diploma/Second Term/unit_7_MCU_Essential_Peripherals/Lesson3_GPIO/GPIO_Driver_STM32F103C6/Drivers/STM32F103C6_Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -gdwarf-2 -o "Drivers.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Embedded System Diploma\Second Term\unit_7_MCU_Essential_Peripherals\Lesson3_GPIO\GPIO_Driver_STM32F103C6\Drivers\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Drivers.elf
+ 
+arm-none-eabi-objdump -h -S  Drivers.elf  > "Drivers.list"
+arm-none-eabi-objcopy  -O binary  Drivers.elf  "Drivers.bin"
+arm-none-eabi-size   Drivers.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1428	      8	   1568	   3004	    bbc	Drivers.elf
+Finished building: Drivers.list
+Finished building: Drivers.bin
+Finished building: default.size.stdout
+ 
+ 
+ 

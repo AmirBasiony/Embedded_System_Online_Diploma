@@ -1,0 +1,48 @@
+/*
+ * STM32F103C6_GPIO.c
+ *
+ *  Created on: Jul 16, 2023
+ *      Author: Amir
+ */
+#include "STM32F103C6_GPIO.h"
+
+/**================================================================
+* @Fn			-MCAL_GPIO_Init
+* @brief 		-Initialize GPIOx PINy according to the specified parameters in PinConfig
+* @param [in]   -GPIOx : were x can be (A...E depending on device used)to select the GPIO Peripheral
+* @param [in]   -PinConfig : pointer to GPIO_PinConfig_t Structure that Contains
+* 				 the configuration information for the specified GPIO PIN.
+* @retval		-none
+* Note			-STM32F103C6 MCU have GPIO A,B,C,D,E Modules
+* 				 But LQFP48 package has A,B,PART Part of C/D exported as external PINS from the Modules
+*/
+
+void MCAL_GPIO_Init(GPIO_TypeDef *GPIOx , GPIO_PINConfig_t *PinConfig)
+{
+
+}
+
+
+/**================================================================
+* @Fn			-MCAL_GPIO_DeInit
+* @brief 		-Reset GPIOx
+* @param [in]   -GPIOx : were x can be (A...E depending on device used)to select the GPIO Peripheral
+* @retval		-none
+* Note			-none
+*/
+void MCAL_GPIO_DeInit(GPIO_TypeDef *GPIOx)
+{
+
+}
+
+/**================================================================
+* @Fn			-MCAL_GPIO_ReadPin
+* @brief 		-Reset All GPIO Registers
+* @param [in]   -GPIOx : were x can be (A...E depending on device used)to select the GPIO Peripheral
+* @retval		-none
+* Note			-none
+*/
+void MCAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx , GPIO_PINConfig_t *PinConfig, uint8_t PinNumber)
+{
+
+}

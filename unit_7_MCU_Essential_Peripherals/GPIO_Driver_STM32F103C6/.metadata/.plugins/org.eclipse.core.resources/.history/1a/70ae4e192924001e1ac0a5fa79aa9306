@@ -1,0 +1,58 @@
+/*
+ * STM32F103C6_GPIO.h
+ *
+ *  Created on: Jul 16, 2023
+ *      Author: Amir
+ */
+
+#ifndef INC_STM32F103C6_GPIO_H_
+#define INC_STM32F103C6_GPIO_H_
+
+//-----------------------------
+//Includes
+//-----------------------------
+#include "STM32F103x6.h"
+
+//-----------------------------
+//User type definitions (structures)
+//-----------------------------
+typedef struct
+{
+	volatile uint16_t GPIO_PIN_Number;//specifies the GPIOx Pins to be Configured
+								//user choose Pin Number According to @ref GPIO_PINS_Define
+	volatile uint16_t GPIO_PIN_MODE;
+	volatile uint16_t GPIO_PIN_Speed;
+}GPIO_PINConfig_t;
+
+//-----------------------------
+//Macros Configuration References
+//-----------------------------
+
+//@ref GPIO_PINS_Define
+#define GPIO_PIN_0			 (uint16_t)0X0001u // Pin 0 Selected
+#define GPIO_PIN_1			 (uint16_t)0X0002u // Pin 1 Selected
+#define GPIO_PIN_2			 (uint16_t)0X0004u // Pin 2 Selected
+#define GPIO_PIN_3			 (uint16_t)0X0008u // Pin 3 Selected
+#define GPIO_PIN_4			 (uint16_t)0X0010u // Pin 4 Selected
+#define GPIO_PIN_5			 (uint16_t)0X0020u // Pin 5 Selected
+#define GPIO_PIN_6			 (uint16_t)0X0040u // Pin 6 Selected
+#define GPIO_PIN_7			 (uint16_t)0X0080u // Pin 7 Selected
+#define GPIO_PIN_8			 (uint16_t)0X0100u // Pin 8 Selected
+#define GPIO_PIN_9			 (uint16_t)0X0200u // Pin 9 Selected
+#define GPIO_PIN_10			 (uint16_t)0X0400u // Pin 10 Selected
+#define GPIO_PIN_11			 (uint16_t)0X0800u // Pin 11 Selected
+#define GPIO_PIN_12			 (uint16_t)0X1000u // Pin 12 Selected
+#define GPIO_PIN_13			 (uint16_t)0X2000u // Pin 13 Selected
+#define GPIO_PIN_14			 (uint16_t)0X4000u // Pin 14 Selected
+#define GPIO_PIN_15			 (uint16_t)0X8000u // Pin 15 Selected
+#define GPIO_PIN_ALL			 (uint16_t)0XFFFFu // All Pins Selected
+
+#define GPIO_PIN_MASK		 0X0000FFFFu // PIN mask for assert test
+/*
+* ===============================================
+* APIs Supported by "MCAL GPIO DRIVER"
+* ===============================================
+*/
+
+
+#endif /* INC_STM32F103C6_GPIO_H_ */
