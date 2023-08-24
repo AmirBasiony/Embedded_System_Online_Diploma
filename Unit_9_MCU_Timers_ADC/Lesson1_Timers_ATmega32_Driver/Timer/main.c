@@ -28,26 +28,21 @@ void TIMER0_OVF_CALLBACK()
 
 void PWM0_Init_Handle()
 {
-	 TIMER0_Config_t timer0Config = {TIMER0_FAST_PWM_MODE ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_NON_INVERTING};
+	 //TIMER0_Config_t timer0Config = {TIMER0_FAST_PWM_MODE ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_NON_INVERTING};
 	 //TIMER0_Config_t timer0Config = {TIMER0_FAST_PWM_MODE ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_INVERTING};
 	 //TIMER0_Config_t timer0Config = {TIMER0_Phase_Correct_PWM ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_NON_INVERTING};	 
-	 //TIMER0_Config_t timer0Config = {TIMER0_Phase_Correct_PWM ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_INVERTING};	 
+	 TIMER0_Config_t timer0Config = {TIMER0_Phase_Correct_PWM ,PRESCALING_CLK_8 ,OCMIE0_Enable ,TOVIE0_Disable,PWM0_STATE_INVERTING};	 
 	 // Initialize TIMER0
 	 TIMER0_Init(&timer0Config);
 
 	 // Set pulse output pin as output
 	 SET_BIT(DDRB,PULSE_OC0_PIN);
-	
-	 //Comopare_Value = 256 * (Duty_cycle/100)
 	 
 	 // Set the compare value for a 50% duty cycle
-	 // u8 compareValue = 127; // 50% of 255 (8-bit PWM resolution)
+	 //  PWM0_SetDutyCycleValue(50);
 	 
 	 // Set the compare value for a 75% duty cycle
-	 u8 compareValue = 191;
-
-	 // Set the compare value
-	 TIMER0_SetCompareValue(compareValue);
+	 PWM0_SetDutyCycleValue(75);
 
 	 // Set the compare match interrupt callback function
 	 TIMER0_SetCallBack_CompareMatch_Interrupt(PWM_PulseCallback);

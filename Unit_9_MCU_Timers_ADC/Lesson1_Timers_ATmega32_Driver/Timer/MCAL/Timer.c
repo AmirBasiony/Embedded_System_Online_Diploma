@@ -136,8 +136,12 @@ void TIMER0_InitPWM(TIMER0_Config_t *TIM0_Config)
 		SET_BIT(TCCR0, COM01);
 		SET_BIT(TCCR0, COM00);
 	}
-	// Initial duty cycle is 0
-	OCR0 = 0;
+}
+
+void PWM0_SetDutyCycleValue(u8 DutyCycle)
+{
+	u8 Compare_Value = (DutyCycle / 100.0) * 255;
+	TIMER0_SetCompareValue(Compare_Value);
 }
 
 E_STATUS_t TIMER0_Stop(void)

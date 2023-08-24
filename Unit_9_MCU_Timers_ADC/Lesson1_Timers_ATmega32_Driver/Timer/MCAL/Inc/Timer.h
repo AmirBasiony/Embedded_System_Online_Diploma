@@ -153,5 +153,6 @@ void TIMER0_SetCallBack_CompareMatch_Interrupt(PTR_ToVoidFun_t CallBack);
 
 // Function to initialize PWM settings for Timer0 (internal use)
 void TIMER0_InitPWM(TIMER0_Config_t *TIM0_Config);
-
+//calculate OCR0 from the Duty Cycle
+void PWM0_SetDutyCycleValue(u8 DutyCycle);
 #endif /* TIMER_H_ */
