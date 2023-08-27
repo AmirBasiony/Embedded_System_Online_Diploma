@@ -12,12 +12,12 @@
 
 ---
 
-### Second Term ![image](https://progress-bar.dev/30/?title=IN_PROGRESS&color=ff00ff)
+### Second Term ![image](https://progress-bar.dev/66.6/?title=IN_PROGRESS&color=ff00ff)
 
 - [Unit 6: MCU Fundamentals](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_6_MCU_Fundamentals) ![image](https://progress-bar.dev/100/)
 - [Unit 7: MCU Essential Peripherals](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_7_MCU_Essential_Peripherals) ![image](https://progress-bar.dev/100/)
-- [Unit 8: MCU Interfacing](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/0/)
-- [Unit 9: MCU Timers/ADC](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/0/)
+- [Unit 8: MCU Interfacing](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_8_MCU_Interfacing) ![image](https://progress-bar.dev/100/)
+- [Unit 9: MCU Timers/ADC](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_9_MCU_Timers_ADC) ![image](https://progress-bar.dev/100/)
 - [Unit 10: SW Testing/Validation](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/0/)
 - [Unit 11: Apply on Embedded Systems Jobs](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) ![image](https://progress-bar.dev/0/?title=Exams&color=bababa)
 
