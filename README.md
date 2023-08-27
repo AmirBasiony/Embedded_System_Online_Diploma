@@ -12,7 +12,7 @@
 
 ---
 
-### Second Term ![image](https://progress-bar.dev/66.6/?title=IN_PROGRESS&color=ff00ff)
+### Second Term ![image](https://progress-bar.dev/66/?title=IN_PROGRESS&color=ff00ff)
 
 - [Unit 6: MCU Fundamentals](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_6_MCU_Fundamentals) ![image](https://progress-bar.dev/100/)
 - [Unit 7: MCU Essential Peripherals](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_7_MCU_Essential_Peripherals) ![image](https://progress-bar.dev/100/)
