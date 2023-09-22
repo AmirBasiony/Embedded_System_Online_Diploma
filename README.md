@@ -15,7 +15,7 @@ __________________________________________________________________
 | [Unit 4: System Architect](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/Unit_4_System_Architecture) | ![image](https://progress-bar.dev/100/) |
 | [Unit 5: First Term Projects](https://github.com/AmirBasiony/Mastering_Embedded_Systems/tree/main/First_Term_Projects) | ![image](https://progress-bar.dev/100/) |
 __________________________________________________________________
-___
+
 ### Second Term ![image](https://progress-bar.dev/66/?title=IN_PROGRESS&color=ff00ff)
 __________________________________________________________________
 | Title | Progress |
@@ -27,7 +27,7 @@ __________________________________________________________________
 | [Unit 10: SW Testing/Validation](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) | ![image](https://progress-bar.dev/0/) |
 | [Unit 11: Apply on Embedded Systems Jobs](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) | ![image](https://progress-bar.dev/0/?title=Exams&color=bababa) |
 __________________________________________________________________
-___
+
 ### Third Term ![image](https://progress-bar.dev/0/?title=Start_Soon&color=ff0000)
 __________________________________________________________________
 | Title | Progress |
@@ -39,7 +39,6 @@ __________________________________________________________________
 | [Unit 17: Embedded Linux Basics](https://github.com/AmirBasiony/Mastering_Embedded_Systems.git) | ![image](https://progress-bar.dev/0/) |
 __________________________________________________________________
 
-___
 ## Overall progress ![image](https://github.com/AmirBasiony/Mastering_Embedded_Systems/blob/main/First%20Term%20Certificate.png)
 ___
 
