@@ -1,7 +1,5 @@
 # Pressure Control System 🕹🕹
-
-![gitHub](https://drive.google.com/file/d/1-_GHUHcRmSy4MluvdPKIQ3P0Ckv7jGuP/view?usp=drive_link)
-
+___
 ## Description
 In this project, A client expects you to deliver the software with the following system Specification: 
   #### - A pressure controller informs the crew of a cabin with an alarm when the pressure exceeds 20 bars in the cabin.
