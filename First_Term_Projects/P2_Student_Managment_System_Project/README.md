@@ -1,7 +1,5 @@
 # Student Management System 👨‍🎓👨‍🎓
-
-![gitHub](https://github.com/MostafaEdrees11/Mastering_Embedded_System_Online_Diploma/blob/master/Unit5_First%20Term%20Projects/Student%20Management%20System/Running%20Screenshots/Cover%20Page.PNG)
-
+___
 ## Description
 It is a simple software for Student Information Management System which can perform the following operations:
 
