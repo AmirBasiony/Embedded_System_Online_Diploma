@@ -26,7 +26,7 @@ To Build and run the project there are two methods:
 
     To build the project use this command:
     ```gcc
-    gcc main.c "Student Database.c" -o "Student Database.exe"
+    gcc main.c DB_Student.c -I. -o "Student Database.exe"
     ```
 
     To run the project use this command:
