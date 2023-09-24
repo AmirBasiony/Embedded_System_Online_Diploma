@@ -1,7 +1,7 @@
-# Author: Amir Ebrahem Elbasiony
+# Author: [Amir Ebrahem Elbasiony](https://www.linkedin.com/in/amir-elbasiony-57809b204/)
 
-### Instructor : Eng.Keroles Shenouda
-### Learn In Depth Online Diploma
+### Instructor: [Eng.Keroles Shenouda](https://www.linkedin.com/in/keroles-khalil-2a86057b/)
+### [Learn In-Depth Online Diploma](https://www.learn-in-depth.com/)
 
 ## Contents
 __________________________________________________________________
