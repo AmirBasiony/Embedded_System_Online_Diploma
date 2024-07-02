@@ -42,6 +42,6 @@ __________________________________________________________________
 ## Overall progress ![image](https://github.com/AmirBasiony/Mastering_Embedded_Systems/blob/main/First%20Term%20Certificate.png)
 ___
 
-## My Progress Profile: [Click Here](https://www.learn-in-depth.com/online-diploma/amirbasiony14%40gmail.com)
+## My Progress Profile: [Click Here](https://www.learn-in-depth-store.com/certificate/amirbasiony14%40gmail.com)
 
 ---
